@@ -7,6 +7,7 @@ const Home = (() => {
     const container = document.createElement("main");
     container.classList.add("home");
 
+    addPhoto(container);
     addBanner(container);
 
     content.appendChild(container);
@@ -14,17 +15,39 @@ const Home = (() => {
 
   function addBanner(element) {
     const div = document.createElement("div");
-    div.classList.add("banner");
+
+    const h1 = document.createElement("h1");
+    h1.textContent = "Mother Nature";
 
     const p = document.createElement("p");
-    const as = createBannerLinks();
-    p.textContent = "Photo from x on x";
+    p.textContent =
+      "Providing you every single thing you've ever eaten since the beginnig of time";
+
+    div.classList.add("banner");
+    div.appendChild(h1);
     div.appendChild(p);
 
     element.appendChild(div);
   }
 
-  function createBannerLinks() {
+  function addPhoto(element) {
+    const div = document.createElement("div");
+    div.classList.add("photo");
+
+    const p = document.createElement("p");
+    const as = createPhotoLinks();
+
+    p.innerHTML = "Photo from ";
+    p.appendChild(as[0]);
+    p.innerHTML += " on ";
+    p.appendChild(as[1]);
+
+    div.appendChild(p);
+
+    element.appendChild(div);
+  }
+
+  function createPhotoLinks() {
     const aElements = [];
 
     const links = [

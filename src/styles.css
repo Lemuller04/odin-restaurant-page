@@ -3,6 +3,7 @@
   --highlight: #BB4430;
   --primary-color: #006B32;
   --bg-color: #F6BE9A;
+  --home-round-borders: 20px;
 }
 
 *,
@@ -51,7 +52,7 @@ footer {
   padding: 3px 0;
 }
 
-footer a {
+a {
   color: inherit;
   padding: 0 5px;
 }
@@ -62,18 +63,46 @@ footer a:nth-child(2) {
 
 #content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 3vh 9vw;
 }
 
 .home {
+  flex: 1;
   display: grid;
-  grid-template: 1fr 1fr / auto 1fr;
-  place-content: stretch;
+  grid-template: auto 1fr / auto 1fr;
+  height: 100%;
 }
 
-.banner {
+.photo {
   grid-area: 1 / 1 / 3 / 2;
   background-image: url("./pexels-valeriya-64540.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: grid;
+  align-content: end;
+  border-radius: var(--home-round-borders) 0 var(--home-round-borders) var(--home-round-borders);
+}
+
+.photo p {
+  color: #fff;
+  background-color: rgb(0 0 0 / .6);
+  padding: 0 3px;
+  margin-bottom: 20px;
+}
+
+.banner {
+  background-color: #56E39F;
+  padding: 5vh 3vw 5vh 3vw;
+  border-radius: 0 var(--home-round-borders) var(--home-round-borders) 0;
+}
+
+.banner h1 {
+  font-size: 3rem;
+}
+
+.banner p {
+  font-size: 1.5rem;
 }
