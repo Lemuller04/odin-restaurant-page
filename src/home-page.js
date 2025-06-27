@@ -90,15 +90,23 @@ const Home = (() => {
   }
 
   function addCuriosities(element) {
-    const divs = createCuriosities();
-    const curiosity = document.createElement("div");
+    const div = document.createElement("div");
+    const curiosityTexts = createCuriosities();
+    const curiosityTextContainer = document.createElement("div");
+
     const h2 = document.createElement("h2");
     h2.textContent = "Did You Know?";
-    curiosity.appendChild(h2);
-    curiosity.appendChild(divs[Math.floor(Math.random() * divs.length)]);
-    curiosity.classList.add("curiosity");
 
-    element.appendChild(curiosity);
+    div.appendChild(h2);
+
+    curiosityTextContainer.appendChild(
+      curiosityTexts[Math.floor(Math.random() * curiosityTexts.length)],
+    );
+    div.classList.add("curiosity");
+
+    div.appendChild(curiosityTextContainer);
+
+    element.appendChild(div);
   }
 
   function createCuriosities() {

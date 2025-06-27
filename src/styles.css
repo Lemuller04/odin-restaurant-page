@@ -3,6 +3,7 @@
   --highlight: #BB4430;
   --primary-color: #006B32;
   --bg-color: #F6BE9A;
+  --secondary-color: #56E39F;
   --home-round-borders: 20px;
 }
 
@@ -95,7 +96,7 @@ footer a:nth-child(2) {
 }
 
 .banner {
-  background-color: #56E39F;
+  background-color: var(--secondary-color);
   padding: 5vh 3vw 5vh 3vw;
   border-radius: 0 var(--home-round-borders) var(--home-round-borders) 0;
 }
@@ -116,7 +117,34 @@ footer a:nth-child(2) {
   font-size: 1.3rem;
 }
 
+.curiosity>div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .info {
   padding: 9vh 3vw;
   font-size: 1.3rem;
+}
+
+.menu-main {
+  display: grid;
+  grid-template: auto / repeat(auto-fit, minmax(450px, 1fr));
+  gap: 90px;
+}
+
+.menu-main h2 {
+  background-color: var(--secondary-color);
+  padding: 0 40px;
+  border-radius: 20px 20px 0 0;
+}
+
+.category {
+  display: grid;
+  grid-template: auto / repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.category h2 {
+  grid-area: 1 / 1 / 1 / -1;
 }

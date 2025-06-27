@@ -1,5 +1,6 @@
 import "./styles.css";
 import Home from "./home-page.js";
+import Menu from "./menu-page.js";
 
 (function () {
   const buttons = document.querySelectorAll("button");
@@ -13,7 +14,7 @@ import Home from "./home-page.js";
           Home.load();
           break;
         case "menu":
-          console.log("menu");
+          Menu.load();
           break;
         case "contact":
           console.log("contact");
@@ -33,4 +34,4 @@ import Home from "./home-page.js";
   }
 })();
 
-Home.load();
+Menu.load();
