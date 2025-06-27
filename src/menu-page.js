@@ -35,9 +35,13 @@ const Menu = (() => {
         const h3 = document.createElement("h3");
         h3.textContent = item.name;
 
+        const span = document.createElement("span");
+        span.textContent = "emoji";
+
         const p = document.createElement("p");
         p.textContent = item.description;
 
+        h3.appendChild(span);
         div.appendChild(h3);
         div.appendChild(p);
 
@@ -52,17 +56,20 @@ const Menu = (() => {
     const items = [
       {
         name: "Strawberry",
-        description: "Moramngo",
+        description:
+          "Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry ",
         categorie: "From the Garden",
       },
       {
         name: "Strawberry",
-        description: "Moramngo",
+        description:
+          "Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry ",
         categorie: "From the Garden",
       },
       {
         name: "Strawberry",
-        description: "Moramngo",
+        description:
+          "Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry ",
         categorie: "From the Garden",
       },
       {

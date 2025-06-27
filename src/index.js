@@ -1,6 +1,7 @@
 import "./styles.css";
 import Home from "./home-page.js";
 import Menu from "./menu-page.js";
+import Contact from "./contact.js";
 
 (function () {
   const buttons = document.querySelectorAll("button");
@@ -11,19 +12,30 @@ import Menu from "./menu-page.js";
 
       switch (button.value) {
         case "home":
+          setActivePage(button);
           Home.load();
           break;
         case "menu":
+          setActivePage(button);
           Menu.load();
           break;
         case "contact":
-          console.log("contact");
+          setActivePage(button);
+          Contact.load();
           break;
         default:
           Home.load();
       }
     });
   });
+
+  function setActivePage(button) {
+    for (let b of buttons) {
+      b.classList.remove("active");
+    }
+
+    button.classList.add("active");
+  }
 
   function clearPage() {
     const content = document.querySelector("#content");
@@ -34,4 +46,4 @@ import Menu from "./menu-page.js";
   }
 })();
 
-Home.load();
+Contact.load();
