@@ -6,9 +6,31 @@ import Home from "./home-page.js";
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      console.log(button);
+      clearPage();
+
+      switch (button.value) {
+        case "home":
+          Home.load();
+          break;
+        case "menu":
+          console.log("menu");
+          break;
+        case "contact":
+          console.log("contact");
+          break;
+        default:
+          Home.load();
+      }
     });
   });
+
+  function clearPage() {
+    const content = document.querySelector("#content");
+
+    while (content.firstChild) {
+      content.removeChild(content.firstChild);
+    }
+  }
 })();
 
 Home.load();
