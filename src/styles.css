@@ -72,12 +72,12 @@ footer a:nth-child(2) {
 .home {
   flex: 1;
   display: grid;
-  grid-template: auto 1fr / auto 1fr;
+  grid-template: auto auto 1fr / auto 1fr;
   height: 100%;
 }
 
 .photo {
-  grid-area: 1 / 1 / 3 / 2;
+  grid-area: 1 / 1 / 4 / 2;
   background-image: url("./pexels-valeriya-64540.jpg");
   background-size: cover;
   background-position: center;
@@ -90,7 +90,7 @@ footer a:nth-child(2) {
 .photo p {
   color: #fff;
   background-color: rgb(0 0 0 / .6);
-  padding: 0 3px;
+  padding: 0 3vw;
   margin-bottom: 20px;
 }
 
@@ -112,7 +112,11 @@ footer a:nth-child(2) {
   padding: 0 3vw;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   gap: 20px;
+  font-size: 1.3rem;
+}
+
+.info {
+  padding: 9vh 3vw;
   font-size: 1.3rem;
 }

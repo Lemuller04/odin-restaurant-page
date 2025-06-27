@@ -9,9 +9,25 @@ const Home = (() => {
 
     addPhoto(container);
     addBanner(container);
+    addInfo(container);
     addCuriosities(container);
 
     content.appendChild(container);
+  }
+
+  function addInfo(element) {
+    const div = document.createElement("div");
+    div.classList.add("info");
+
+    const p1 = document.createElement("p");
+    p1.innerHTML = "&#128338; Open: 24/7";
+    div.appendChild(p1);
+
+    const p2 = document.createElement("p");
+    p2.innerHTML = "&#127757; Location: yes";
+    div.appendChild(p2);
+
+    element.appendChild(div);
   }
 
   function addBanner(element) {
@@ -38,7 +54,7 @@ const Home = (() => {
     const p = document.createElement("p");
     const as = createPhotoLinks();
 
-    p.innerHTML = "Photo from ";
+    p.innerHTML = "Photo by";
     p.appendChild(as[0]);
     p.innerHTML += " on ";
     p.appendChild(as[1]);
