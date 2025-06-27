@@ -34,4 +34,4 @@ import Menu from "./menu-page.js";
   }
 })();
 
-Menu.load();
+Home.load();

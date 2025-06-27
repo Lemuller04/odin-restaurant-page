@@ -11,17 +11,22 @@ const Menu = (() => {
   }
 
   function createMenu(element) {
-    const categories = ["Fruit", "Vegetable", "c3", "mais um"];
+    const categories = [
+      "From the Garden",
+      "From the Earth",
+      "From the Orchard",
+      "From the Wild",
+    ];
 
     for (let type of categories) {
       const categoryContainer = document.createElement("div");
       categoryContainer.classList.add("category");
 
       const h2 = document.createElement("h2");
-      h2.textContent = `${type}s`;
+      h2.textContent = `${type}`;
       categoryContainer.appendChild(h2);
 
-      const items = menuItems(type.toLowerCase());
+      const items = menuItems(type);
 
       for (let item of items) {
         const div = document.createElement("div");
@@ -48,62 +53,62 @@ const Menu = (() => {
       {
         name: "Strawberry",
         description: "Moramngo",
-        categorie: "fruit",
+        categorie: "From the Garden",
       },
       {
         name: "Strawberry",
         description: "Moramngo",
-        categorie: "fruit",
+        categorie: "From the Garden",
       },
       {
         name: "Strawberry",
         description: "Moramngo",
-        categorie: "fruit",
+        categorie: "From the Garden",
       },
       {
         name: "vergetable eu acho",
         description: "comam bem",
-        categorie: "vegetable",
+        categorie: "From the Earth",
       },
       {
         name: "vergetable eu acho",
         description: "comam bem",
-        categorie: "vegetable",
+        categorie: "From the Earth",
       },
       {
         name: "vergetable eu acho",
         description: "comam bem",
-        categorie: "vegetable",
+        categorie: "From the Earth",
       },
       {
         name: "nsei",
         description: "sabo nada",
-        categorie: "c3",
+        categorie: "From the Orchard",
       },
       {
         name: "nsei",
         description: "sabo nada",
-        categorie: "c3",
+        categorie: "From the Orchard",
       },
       {
         name: "nsei",
         description: "sabo nada",
-        categorie: "c3",
+        categorie: "From the Orchard",
       },
       {
         name: "é é é é é é é",
         description: "ih é mermo",
-        categorie: "mais um",
+        categorie: "From the Wild",
       },
       {
         name: "é é é é é é é",
         description: "ih é mermo",
-        categorie: "mais um",
+        categorie: "From the Wild",
       },
       {
         name: "é é é é é é é",
         description: "ih é mermo",
-        categorie: "mais um",
+        categorie: "From the Wild",
       },
     ];
 

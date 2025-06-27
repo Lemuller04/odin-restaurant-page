@@ -49,6 +49,10 @@ nav button {
   border-radius: 10px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 footer {
   color: #fff;
   padding: 3px 0;
@@ -131,7 +135,7 @@ footer a:nth-child(2) {
 .menu-main {
   display: grid;
   grid-template: auto / repeat(auto-fit, minmax(450px, 1fr));
-  gap: 90px;
+  gap: 75px;
 }
 
 .menu-main h2 {
@@ -143,8 +147,20 @@ footer a:nth-child(2) {
 .category {
   display: grid;
   grid-template: auto / repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  background-color: rgb(50 50 50 / .1);
+  border-radius: 20px 20px 15px 15px;
 }
 
 .category h2 {
   grid-area: 1 / 1 / 1 / -1;
+}
+
+.menu-item {
+  display: grid;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 5px solid var(--highlight);
+  box-shadow: 2px 2px 2px rgb(0 0 0 / .2);
 }
