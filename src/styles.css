@@ -138,7 +138,8 @@ footer a:nth-child(2) {
   gap: 75px;
 }
 
-.menu-main h2 {
+.menu-main h2,
+.contact-main h2 {
   background-color: var(--secondary-color);
   padding: 0 40px;
   border-radius: 20px 20px 0 0;
@@ -175,4 +176,49 @@ footer a:nth-child(2) {
 
 .active {
   border: 2px solid #fff;
+}
+
+.contact-main {
+  font-size: 1.3rem;
+}
+
+.contact-main h2 {
+  text-align: center;
+}
+
+.contact-main ul {
+  list-style-type: none;
+  display: flex;
+  padding: 15px;
+}
+
+.socials {
+  justify-content: space-evenly;
+}
+
+form {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  padding: 40px;
+  border: 2px solid var(--font-color);
+  border-radius: 0 0 20px 20px;
+}
+
+form p {
+  display: grid;
+}
+
+input {
+  width: 350px;
+  padding: 8px 16px;
+  font-size: 1.1rem;
+}
+
+textarea {
+  width: 500px;
+  height: 200px;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  font-family: inherit;
 }

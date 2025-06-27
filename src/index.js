@@ -46,4 +46,4 @@ import Contact from "./contact.js";
   }
 })();
 
-Contact.load();
+Home.load();
