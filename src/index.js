@@ -3,47 +3,50 @@ import Home from "./home-page.js";
 import Menu from "./menu-page.js";
 import Contact from "./contact.js";
 
-(function () {
-  const buttons = document.querySelectorAll("button");
+document.addEventListener("DOMContentLoaded", () => {
+  (function () {
+    const buttons = document.querySelectorAll("button");
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      clearPage();
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        clearPage();
 
-      switch (button.value) {
-        case "home":
-          setActivePage(button);
-          Home.load();
-          break;
-        case "menu":
-          setActivePage(button);
-          Menu.load();
-          break;
-        case "contact":
-          setActivePage(button);
-          Contact.load();
-          break;
-        default:
-          Home.load();
-      }
+        switch (button.value) {
+          case "home":
+            setActivePage(button);
+            Home.load();
+            break;
+          case "menu":
+            setActivePage(button);
+            Menu.load();
+            break;
+          case "contact":
+            setActivePage(button);
+            Contact.load();
+            break;
+          default:
+            console.warn(`Unknown ${button} pressed`);
+            setActivePage(button);
+            Home.load();
+        }
+      });
     });
-  });
 
-  function setActivePage(button) {
-    for (let b of buttons) {
-      b.classList.remove("active");
+    function setActivePage(button) {
+      for (let b of buttons) {
+        b.classList.remove("active");
+      }
+
+      button.classList.add("active");
     }
 
-    button.classList.add("active");
-  }
+    function clearPage() {
+      const content = document.querySelector("#content");
 
-  function clearPage() {
-    const content = document.querySelector("#content");
-
-    while (content.firstChild) {
-      content.removeChild(content.firstChild);
+      while (content.firstChild) {
+        content.removeChild(content.firstChild);
+      }
     }
-  }
-})();
-
+  })();
+});
 Home.load();
