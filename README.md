@@ -11,5 +11,3 @@ A dynamic, fully JavaScript-powered restaurant homepage built as a project for [
 - Webpack-powered build and development flow
 - Deployed via GitHub Pages
 
-## 🗂️ File Structure
-
