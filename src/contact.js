@@ -63,12 +63,13 @@ const Contact = (() => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       alert("Thnakyou for the review. Have an awesome day!");
+      form.reset();
     });
   }
 
   function addAppInfo(element) {
     const h3 = document.createElement("h3");
-    h3.textContent = "Download our app: ";
+    h3.textContent = "Bring the forest to your fingertips. Download our app:";
     const ul = document.createElement("ul");
     ul.classList.add("app-links");
     ul.appendChild(h3);

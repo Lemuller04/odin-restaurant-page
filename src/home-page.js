@@ -20,11 +20,11 @@ const Home = (() => {
     div.classList.add("info");
 
     const p1 = document.createElement("p");
-    p1.innerHTML = "&#128338; Open: 24/7";
+    p1.innerHTML = "&#128338; Open: Sunrise to stardust (aka 24/7)";
     div.appendChild(p1);
 
     const p2 = document.createElement("p");
-    p2.innerHTML = "&#127757; Location: yes";
+    p2.innerHTML = "&#128205; Location: Found wherever plants grow";
     div.appendChild(p2);
 
     element.appendChild(div);
