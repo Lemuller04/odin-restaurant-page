@@ -1,9 +1,9 @@
 import Footer from "./footer.js";
 
 const Home = (() => {
-  const content = document.querySelector("#content");
-
   function load() {
+    const content = document.querySelector("#content");
+
     const container = document.createElement("main");
     container.classList.add("home");
 

@@ -1,7 +1,7 @@
 const Contact = (() => {
-  const content = document.querySelector("#content");
-
   function load() {
+    const content = document.querySelector("#content");
+
     const container = document.createElement("main");
     container.classList.add("contact-main");
 
@@ -59,6 +59,11 @@ const Contact = (() => {
     form.appendChild(pReview);
     form.appendChild(button);
     element.appendChild(form);
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thnakyou for the review. Have an awesome day!");
+    });
   }
 
   function addAppInfo(element) {

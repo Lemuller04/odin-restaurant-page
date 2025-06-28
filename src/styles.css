@@ -134,7 +134,7 @@ footer a:nth-child(2) {
 
 .menu-main {
   display: grid;
-  grid-template: auto / repeat(auto-fit, minmax(450px, 1fr));
+  grid-template: auto / repeat(auto-fit, minmax(250px, 1fr));
   gap: 75px;
 }
 
@@ -161,12 +161,18 @@ footer a:nth-child(2) {
 }
 
 .menu-item {
+  max-width: 350px;
   display: grid;
   background-color: #fff;
   padding: 20px;
   border-radius: 15px;
   border-left: 5px solid var(--highlight);
   box-shadow: 2px 2px 2px rgb(0 0 0 / .2);
+}
+
+.menu-item:hover {
+  background-color: #eee;
+  cursor: pointer;
 }
 
 .menu-item h3 {
